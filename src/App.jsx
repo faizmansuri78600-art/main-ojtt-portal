@@ -7,6 +7,13 @@ import ReviewReports from "./pages/faculty/ReviewReports";
 import ErrorBoundary from "./components/faculty/ErrorBoundary";
 import ApproveDiary from "./pages/faculty/ApproveDiary";
 import Evaluation from "./pages/faculty/Evaluation";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Dashboard from "./pages01/Company/CompanyDashboard";
+import CompanyProfile from "./pages01/Company/CompanyProfile";
+import ManageOjtOpportunities from "./pages01/Company/ManageOjtOpportunities";
+import Certificate from "./pages01/Company/Certificate";
+import NotificationsSettings from "./pages01/Company/NotificationsSettings";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -51,6 +58,35 @@ function App() {
       {currentPage === "evaluation" && (
         <Evaluation onNavigate={handleNavigate} />
       )}
+      <BrowserRouter>
+
+      <Routes>
+
+        <Route path="/" element={<Dashboard />} />
+
+        <Route
+          path="/company-profile"
+          element={<CompanyProfile />}
+        />
+
+        <Route
+          path="/manage-ojt-opportunities"
+          element={<ManageOjtOpportunities />}
+        />
+
+        <Route
+          path="/certificate"
+          element={<Certificate />}
+        />
+
+        <Route
+          path="/notifications-settings"
+          element={<NotificationsSettings />}
+        />
+
+      </Routes>
+
+    </BrowserRouter>
     </>
   );
 }
