@@ -7,6 +7,9 @@ import ReviewReports from "./pages/faculty/ReviewReports";
 import ErrorBoundary from "./components/faculty/ErrorBoundary";
 import ApproveDiary from "./pages/faculty/ApproveDiary";
 import Evaluation from "./pages/faculty/Evaluation";
+import Navbar from "./components201/Navbar";
+import Footer from "./components201/Footer";
+import AppRoutes201 from "./routes201/AppRoutes201";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("dashboard");
@@ -24,6 +27,7 @@ function App() {
 
   return (
     <>
+
       {currentPage === "dashboard" && (
         <FacultyDashboard onNavigate={handleNavigate} />
       )}
@@ -51,6 +55,16 @@ function App() {
       {currentPage === "evaluation" && (
         <Evaluation onNavigate={handleNavigate} />
       )}
+
+      <div className="min-h-screen flex flex-col bg-white">
+      <Navbar />
+
+      <main className="flex-1">
+        <AppRoutes201 />
+      </main>
+
+      <Footer />
+    </div>
     </>
   );
 }
