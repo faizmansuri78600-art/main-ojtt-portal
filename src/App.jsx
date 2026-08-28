@@ -17,6 +17,12 @@ import Reports from "./pages16/Student/Reports";
 import Feedback from "./pages16/Student/Feedback";
 import Settings from "./pages16/Student/Settings";
 
+import Dashboard from "./pages01/Company/CompanyDashboard";
+import CompanyProfile from "./pages01/Company/CompanyProfile";
+import ManageOjtOpportunities from "./pages01/Company/ManageOjtOpportunities";
+import Certificate from "./pages01/Company/Certificate";
+import NotificationsSettings from "./pages01/Company/NotificationsSettings";
+
 function App() {
   const [currentPage, setCurrentPage] = useState("dashboard");
 
@@ -72,6 +78,33 @@ function App() {
         <Route path="/Feedback" element={<Feedback/>}/>
         <Route path="/Settings" element={<Settings/>}/>
       </Routes>
+
+      <Routes>
+
+        <Route path="/" element={<Dashboard />} />
+
+        <Route
+          path="/company-profile"
+          element={<CompanyProfile />}
+        />
+
+        <Route
+          path="/manage-ojt-opportunities"
+          element={<ManageOjtOpportunities />}
+        />
+
+        <Route
+          path="/certificate"
+          element={<Certificate />}
+        />
+
+        <Route
+          path="/notifications-settings"
+          element={<NotificationsSettings />}
+        />
+
+      </Routes>
+
     </BrowserRouter>
     </>
   );
