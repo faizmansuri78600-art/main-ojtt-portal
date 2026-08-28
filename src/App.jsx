@@ -8,6 +8,14 @@ import ErrorBoundary from "./components/faculty/ErrorBoundary";
 import ApproveDiary from "./pages/faculty/ApproveDiary";
 import Evaluation from "./pages/faculty/Evaluation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import StudentDashboard from "./pages16/Student/StudentDashboard";
+import BrowseOJT from "./pages16/Student/BrowseOJT";
+import MyProfile from "./pages16/Student/MyProfile";
+import WeeklyDiary from "./Pages16/Student/WeeklyDiary";
+import MyApplication from "./Pages16/Student/MyApplications";
+import Reports from "./pages16/Student/Reports";
+import Feedback from "./pages16/Student/Feedback";
+import Settings from "./pages16/Student/Settings";
 
 import Dashboard from "./pages01/Company/CompanyDashboard";
 import CompanyProfile from "./pages01/Company/CompanyProfile";
@@ -59,6 +67,17 @@ function App() {
         <Evaluation onNavigate={handleNavigate} />
       )}
       <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<StudentDashboard />} />
+        <Route path="/dashboard" element={<StudentDashboard />} />
+        <Route path="/browse-ojt" element={<BrowseOJT />} />
+        <Route path="/profile" element={<MyProfile />} />
+        <Route path="/weekly-diary" element={<WeeklyDiary />} />
+        <Route path="/Myapplication" element={<MyApplication/>}/>
+        <Route path="/Reports" element={<Reports/>}/>
+        <Route path="/Feedback" element={<Feedback/>}/>
+        <Route path="/Settings" element={<Settings/>}/>
+      </Routes>
 
       <Routes>
 
