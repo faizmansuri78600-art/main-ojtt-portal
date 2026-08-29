@@ -414,6 +414,7 @@ function Navbar() {
             to="/register"
             className="flex items-center gap-2 rounded-md bg-[#1260dc] px-5 py-3 text-sm font-semibold transition hover:bg-blue-700"
           >
+            <UserRound size={16} />
             Sign Up
           </Link>
 

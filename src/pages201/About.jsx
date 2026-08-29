@@ -159,7 +159,7 @@ const About = () => {
             {/* Right Illustration */}
             <div className="flex justify-center lg:justify-end">
               <img
-                src="/src/assets201/hero-image.png"
+                src="/src/assets/hero-image.png"
                 alt="AISC OJT Portal Dashboard"
                 className="w-full max-w-3xl object-contain"
                 onError={(e) => {

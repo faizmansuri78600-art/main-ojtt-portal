@@ -12,6 +12,8 @@ import {
   ShieldCheck,
   Target,
   Users,
+  School,
+  ClipboardCheck,
 } from "lucide-react";
 
 import heroIllustration from "../assets/hero-image.png";
@@ -232,7 +234,7 @@ function Home() {
 ========================================================= */}
 <section className="bg-white px-5 py-10 sm:px-8">
 
-  <div className="mx-auto max-w-[1100px]">
+  <div className="mx-auto max-w-[1200px]">
 
     <div className="text-center">
       <h2 className="text-xl font-bold text-[#071d49] sm:text-2xl">
@@ -242,13 +244,13 @@ function Home() {
       <div className="mx-auto mt-3 h-[3px] w-9 rounded-full bg-blue-700" />
     </div>
 
-    <div className="mt-5 grid gap-4 sm:grid-cols-3">
+    <div className="mt-5 grid gap-4 sm:grid-cols-4">
 
       {/* Student Portal */}
       <PortalCard
         icon={<GraduationCap size={25} />}
         title="Student Portal"
-        description="Register, explore opportunities, apply for OJT and track your progress."
+        description="Explore OJT opportunities, apply to suitable positions, track applications, monitor your training progress."
         button="Enter Student Portal"
         color="bg-blue-700"
         bg="bg-[#f6f9ff]"
@@ -266,12 +268,22 @@ function Home() {
 
       {/* College Coordinator Portal */}
       <PortalCard
-        icon={<Building2 size={25} />}
+        icon={<ClipboardCheck size={25} />}
         title="College Coordinator"
-        description="Verify students, allocate faculty mentors, monitor OJT activities and generate reports."
+        description="Verify students, assign faculty mentors, monitor OJT activities and generate reports."
         button="Enter Coordinator Portal"
         color="bg-green-600"
         bg="bg-[#f6fff9]"
+      />
+
+      {/* Faculty Portal */}
+      <PortalCard
+        icon={<School size={25} />}
+        title="Faculty Portal"
+        description="Guide assigned students, monitor their OJT progress, review activities and evaluate performance."
+        button="Enter Faculty Portal"
+        color="bg-orange-500"
+        bg="bg-[#fffaf5]"
       />
 
     </div>
